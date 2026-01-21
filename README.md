@@ -7,6 +7,10 @@
 [![Version](https://img.shields.io/badge/Version-1.0.0-green)](#)
 [![Status](https://img.shields.io/badge/Status-Production-success)](#)
 
+**Languages** | 언어
+--- | ---
+[English](README.md) | [한국어 (Korean)](README.ko.md)
+
 ---
 
 ## 📋 Overview
