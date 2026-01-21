@@ -312,9 +312,9 @@ npm install -g planning-skillset
 
 ## 🔗 링크
 
-- **저장소**: https://github.com/yukgong/planning-skillset
-- **이슈**: https://github.com/yukgong/planning-skillset/issues
-- **토론**: https://github.com/yukgong/planning-skillset/discussions
+- **저장소**: https://github.com/anthropics/planning-skillset
+- **이슈**: https://github.com/anthropics/planning-skillset/issues
+- **토론**: https://github.com/anthropics/planning-skillset/discussions
 - **Claude Code**: https://claude.com/claude-code
 
 ---
@@ -327,8 +327,8 @@ npm install -g planning-skillset
 - 💡 [예제](docs/EXAMPLES.md)
 
 ### 도움 받기
-- 🐛 [이슈 보고](https://github.com/yukgong/planning-skillset/issues)
-- 💬 [토론](https://github.com/yukgong/planning-skillset/discussions)
+- 🐛 [이슈 보고](https://github.com/anthropics/planning-skillset/issues)
+- 💬 [토론](https://github.com/anthropics/planning-skillset/discussions)
 - 📧 support@planning-skillset.com
 
 ### 문제 해결
