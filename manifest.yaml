@@ -1,0 +1,227 @@
+---
+# Planning Skillset Manifest for Claude Code
+# Version: 1.0.0
+# Author: AI Planning Team
+# License: MIT
+
+skillset:
+  id: planning-skillset
+  name: 🎯 AI-Powered Planning Skillset
+  version: 1.0.0
+  description: |
+    Comprehensive planning system with 8 specialized agents for web application ideation,
+    research, analysis, and strategy. Designed for Claude Code integration.
+
+  author: AI Planning Team
+  license: MIT
+
+  # Documentation
+  documentation:
+    main: README.md
+    installation: INSTALLATION.md
+    contributing: CONTRIBUTING.md
+    changelog: CHANGELOG.md
+    api: docs/API.md
+    architecture: docs/ARCHITECTURE.md
+    examples: docs/EXAMPLES.md
+    troubleshooting: docs/TROUBLESHOOTING.md
+
+  # Installation
+  installation:
+    method: bash-script
+    script: install.sh
+    uninstall: uninstall.sh
+    verify: verify.sh
+    platforms:
+      - macOS
+      - Linux
+      - Windows WSL
+    requirements:
+      - bash 4.0+
+      - claude-code 1.0.0+
+      - jq (optional, for JSON processing)
+
+  # Agents
+  agents:
+    total: 8
+    location: ./agents/
+    list:
+      - id: research-agent
+        name: 🔍 Research Agent
+        description: Market research and data collection foundation
+        estimated_duration: "6-8 hours"
+        difficulty: medium
+        prerequisites: []
+        outputs:
+          - Market analysis report
+          - Competitor benchmarking
+          - User interview summaries
+          - Trend analysis
+
+      - id: analysis-agent
+        name: 📊 Analysis Agent
+        description: Data analysis and insights extraction
+        estimated_duration: "5-7 hours"
+        difficulty: medium
+        prerequisites:
+          - research-agent
+        outputs:
+          - Analysis report
+          - Data visualizations
+          - Key findings
+
+      - id: ideation-agent
+        name: 💡 Ideation Agent
+        description: Creative idea generation based on analysis
+        estimated_duration: "6-8 hours"
+        difficulty: medium
+        prerequisites:
+          - analysis-agent
+        outputs:
+          - Idea documents
+          - Concept sketches
+          - Innovation proposals
+
+      - id: structure-agent
+        name: 🏗️ Structure Agent
+        description: Product definition and architecture design
+        estimated_duration: "7-9 hours"
+        difficulty: high
+        prerequisites:
+          - ideation-agent
+        outputs:
+          - Product specification
+          - Architecture diagrams
+          - System design
+
+      - id: validation-agent
+        name: ✔️ Validation Agent
+        description: Comprehensive plan validation and risk assessment
+        estimated_duration: "4-6 hours"
+        difficulty: medium
+        prerequisites:
+          - structure-agent
+        outputs:
+          - Validation report
+          - Risk assessment
+          - Compliance checklist
+
+      - id: user-centered-agent
+        name: 👥 User-Centered Agent
+        description: UX optimization and user experience design
+        estimated_duration: "6-8 hours"
+        difficulty: medium
+        prerequisites:
+          - structure-agent
+        outputs:
+          - UX documentation
+          - User flows
+          - Wireframes
+
+      - id: communication-agent
+        name: 📢 Communication Agent
+        description: Stakeholder communication and messaging strategy
+        estimated_duration: "5-7 hours"
+        difficulty: medium
+        prerequisites:
+          - validation-agent
+        outputs:
+          - Communication strategy
+          - Messaging frameworks
+          - Presentation materials
+
+      - id: strategy-agent
+        name: 🎯 Strategy Agent
+        description: Long-term business strategy development
+        estimated_duration: "5-7 hours"
+        difficulty: high
+        prerequisites:
+          - validation-agent
+          - user-centered-agent
+        outputs:
+          - Strategic plan
+          - Roadmap
+          - KPI framework
+
+  # Commands
+  commands:
+    total: 4
+    location: ./commands/
+    list:
+      - name: skillset:init
+        description: Initialize the planning skillset
+        usage: "/skillset:init [--reset] [--verbose]"
+        file: init.md
+
+      - name: skillset:run
+        description: Run a planning agent
+        usage: "/skillset:run [agent-name] [--guide] [--continue]"
+        file: run.md
+
+      - name: skillset:list
+        description: List all agents and progress
+        usage: "/skillset:list [--status] [--details] [--json]"
+        file: list.md
+
+      - name: skillset:guide
+        description: Display agent-specific guides
+        usage: "/skillset:guide [agent-name] [--short] [--full] [--print]"
+        file: guide.md
+
+  # Utilities
+  utilities:
+    location: ./lib/skillset/
+    files:
+      - skillset-utils.sh
+      - skillset-auto-init.sh
+
+  # Output management
+  outputs:
+    base_directory: ./skillset-output/
+    subdirectories:
+      - research
+      - analysis
+      - ideation
+      - structure
+      - validation
+      - user-centered
+      - communication
+      - strategy
+
+  # Metadata
+  metadata:
+    global_location: ~/.claude/skillsets/planning-skillset/
+    project_location: ./skillset-output/
+    files:
+      - metadata.json
+      - progress.json
+
+  # Features
+  features:
+    - Progressive disclosure UI
+    - Step-by-step workflows
+    - Real-time progress tracking
+    - Automatic initialization
+    - Cross-platform compatibility
+    - JSON/YAML metadata
+    - Comprehensive guides
+    - Error handling and recovery
+
+  # Support
+  support:
+    documentation: ./docs/
+    issues: https://github.com/anthropics/planning-skillset/issues
+    discussions: https://github.com/anthropics/planning-skillset/discussions
+    email: support@planning-skillset.com
+
+  # Version info
+  versions:
+    claude_code_minimum: "1.0.0"
+    node_minimum: "18.0.0"
+    bash_minimum: "4.0"
+
+  # Release info
+  release:
+    date: "2026-01-21"
+    status: production
+    stability: stable

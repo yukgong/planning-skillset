@@ -1,0 +1,82 @@
+{
+  "name": "planning-skillset",
+  "version": "1.0.0",
+  "description": "🎯 AI-Powered Planning Skillset for Claude Code - 8 specialized agents for web application planning",
+  "type": "module",
+  "main": "manifest.yaml",
+  "author": "AI Planning Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anthropics/planning-skillset.git"
+  },
+  "keywords": [
+    "claude-code",
+    "skillset",
+    "planning",
+    "agents",
+    "web-app",
+    "ideation",
+    "strategy",
+    "ux",
+    "research"
+  ],
+  "engines": {
+    "claude-code": ">=1.0.0"
+  },
+  "scripts": {
+    "install": "./install.sh",
+    "uninstall": "./uninstall.sh",
+    "verify": "./verify.sh",
+    "test": "bash tests/test-all.sh"
+  },
+  "files": [
+    "agents/",
+    "guides/",
+    "commands/",
+    "lib/",
+    "docs/",
+    "install.sh",
+    "uninstall.sh",
+    "verify.sh",
+    "manifest.yaml",
+    "LICENSE",
+    "README.md",
+    "INSTALLATION.md",
+    "CHANGELOG.md"
+  ],
+  "installation": {
+    "methods": [
+      "npm",
+      "bash-script",
+      "manual"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows WSL"
+    ]
+  },
+  "agents": {
+    "count": 8,
+    "names": [
+      "research-agent",
+      "analysis-agent",
+      "ideation-agent",
+      "structure-agent",
+      "validation-agent",
+      "user-centered-agent",
+      "communication-agent",
+      "strategy-agent"
+    ]
+  },
+  "commands": {
+    "count": 4,
+    "names": [
+      "skillset:init",
+      "skillset:run",
+      "skillset:list",
+      "skillset:guide"
+    ]
+  }
+}
